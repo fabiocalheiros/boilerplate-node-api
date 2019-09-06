@@ -16,6 +16,12 @@ docker run --name redisexmaple -p 6379:6379 -d -t redis:alpine
 
 - Create file and configure .env with base .env.example
 
+## create tables database
+
+```
+yarn sequelize db:migrate
+```
+
 ## Start server
 
 ```
