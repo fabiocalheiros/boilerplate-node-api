@@ -62,6 +62,16 @@ Import data (Insomnia_2019-09-06.json)
   -- check user exists
   -- check Password
 
+- Authenticate
+  -- validate fields
+  -- generate token
+  -- generate expires
+
+- Reset Password
+  -- validate fields
+  -- validate token
+  -- update password
+
 ### Files
 
 - upload files to server
@@ -74,7 +84,7 @@ Import data (Insomnia_2019-09-06.json)
 
 ### Send Email Notification
 
-- Send notification email example (mailtrap)
+- Send notification email reset password (mailtrap)
 
 #### Error Handling
 
