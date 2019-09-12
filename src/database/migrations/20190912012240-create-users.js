@@ -20,6 +20,18 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      password_reset_token: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      password_reset_expires: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
+      avatar_id: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
