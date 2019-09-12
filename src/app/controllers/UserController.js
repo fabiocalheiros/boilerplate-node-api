@@ -2,9 +2,6 @@ import * as Yup from 'yup';
 import User from '../models/User';
 import File from '../models/File';
 
-import ExampleMail from '../jobs/ExampleMail';
-import Queue from '../../lib/Queue';
-
 class UserController {
   async index(req, res) {
     const user_list = await User.findAll({
@@ -31,16 +28,6 @@ class UserController {
     }
 
     const { id, name, email } = await User.create(req.body);
-
-    const date_user = {
-      name: req.body.name,
-      email: req.body.email,
-      date: new Date(),
-    };
-
-    await Queue.add(ExampleMail.key, {
-      date_user,
-    });
 
     return res.json({
       id,
